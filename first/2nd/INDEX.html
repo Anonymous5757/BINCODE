@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Style Sheets</title>
+  <style>
+    /* External Style Sheet */
+    @import url('styles.css');
+  </style>
+</head>
+<body>
+  <h1>Styling Example</h1>
+  
+  <h2>Inline Style Sheet</h2>
+  <p style="color: blue; font-size: 18px;">This text is styled using inline CSS.</p>
+  
+  <h2>Internal Style Sheet</h2>
+  <p class="highlight">This text is styled using internal CSS.</p>
+  
+  <h2>External Style Sheet</h2>
+  <p class="highlight">This text is styled using an external CSS file.</p>
+
+  <div class="box">
+    <h3>Extra Component: Colored Box</h3>
+    <p>This box is styled using CSS classes.</p>
+  </div>
+
+  <div class="button">
+    <h3>Extra Component: Button</h3>
+    <button>Click me</button>
+  </div>
+
+  <div class="form-container">
+    <h3>Extra Component: Form</h3>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="extra-element">
+    <h3>Extra Component: Custom Element</h3>
+    <p>This is a custom styled element.</p>
+  </div>
+</body>
+</html>

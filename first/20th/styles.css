@@ -1,0 +1,23 @@
+/* Custom Stylesheet */
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: darkblue;
+    text-align: center;
+  }
+  
+  p {
+    color: purple;
+    font-size: 18px;
+  }
+  
+  .box {
+    background-color: yellow;
+    border: 2px solid orange;
+    padding: 10px;
+    text-align: center;
+  }
+  

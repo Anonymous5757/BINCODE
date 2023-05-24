@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <script>
+    function validateForm() {
+      // Get form inputs
+      var firstName = document.forms["registrationForm"]["firstName"].value;
+      var lastName = document.forms["registrationForm"]["lastName"].value;
+      var address = document.forms["registrationForm"]["address"].value;
+      var password = document.forms["registrationForm"]["password"].value;
+      var email = document.forms["registrationForm"]["email"].value;
+      var phoneNumber = document.forms["registrationForm"]["phoneNumber"].value;
+
+      // Validate first name
+      if (firstName === "" || firstName.length < 6 || !/^[a-zA-Z]+$/.test(firstName)) {
+        alert("First name should contain at least 6 alphabetic characters.");
+        return false;
+      }
+
+      // Validate last name
+      if (lastName === "") {
+        alert("Last name should not be empty.");
+        return false;
+      }
+
+      // Validate address
+      if (address === "") {
+        alert("Address should not be empty.");
+        return false;
+      }
+
+      // Validate password
+      if (password.length < 6) {
+        alert("Password should be at least 6 characters long.");
+        return false;
+      }
+
+      // Validate email
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        alert("Invalid email address.");
+        return false;
+      }
+
+      // Validate phone number
+      if (phoneNumber.length !== 10 || isNaN(phoneNumber)) {
+        alert("Phone number should contain 10 digits only.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h1>Registration Page</h1>
+  <form name="registrationForm" onsubmit="return validateForm()" action="submit.php" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" required><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>

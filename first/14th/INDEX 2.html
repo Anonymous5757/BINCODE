@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timetable</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .merge {
+      background-color: #c6e2ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Timetable</h1>
+
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+    </tr>
+    <tr>
+      <td class="merge" rowspan="2">9:00 AM</td>
+      <td>Math</td>
+      <td class="merge" colspan="2">English</td>
+      <td>Science</td>
+      <td>History</td>
+    </tr>
+    <tr>
+      <td>Physics</td>
+      <td>Chemistry</td>
+      <td>Geography</td>
+      <td>Computer</td>
+    </tr>
+    <tr>
+      <td class="merge" rowspan="2">10:00 AM</td>
+      <td>Music</td>
+      <td>Math</td>
+      <td>English</td>
+      <td class="merge" colspan="2">Science</td>
+    </tr>
+    <tr>
+      <td>History</td>
+      <td>Physics</td>
+      <td>Chemistry</td>
+      <td>Biology</td>
+    </tr>
+  </table>
+</body>
+</html>
